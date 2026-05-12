@@ -64,8 +64,8 @@ const works: Work[] = [
     type: "video",
     category: "Institucional",
     title: "Ordem dos Enfermeiros",
-    img: "https://i.vimeocdn.com/video/2156375339-e773d578d117b66feea23318b5ded493fe78dcd0a902cc5dbe0d05b576afb9e5-d_1280?region=us",
-    url: "https://vimeo.com/1191381019",
+    img: "https://i.vimeocdn.com/video/2156375351-819c93d81fa005f6b53d411f36f567b1c735051e4e6d2634870448f570678569-d_640?region=us",
+    url: "https://vimeo.com/1191381017",
   },
   {
     id: 8,
