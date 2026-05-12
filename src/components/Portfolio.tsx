@@ -46,9 +46,10 @@ const works: Work[] = [
   {
     id: 5,
     type: "video",
-    category: "Corporativo",
-    title: "Summit Lisboa",
-    img: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80",
+    category: "Festival",
+    title: "Coala Festival 2025",
+    img: "https://i.vimeocdn.com/video/2034857768-a311af2c33edc9f01f6bc49a0801658e523591c2c8bc20eea3bc93841a5c3957-d_640?region=us",
+    url: "https://vimeo.com/1099809583",
   },
   {
     id: 6,
