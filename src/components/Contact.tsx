@@ -21,7 +21,7 @@ export default function Contact() {
       <div className="orb orb-white w-[700px] h-[700px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.05]" />
 
       <div className="max-w-5xl mx-auto relative z-10">
-        <div className="glass-card rounded-3xl p-10 md:p-16 text-center glow-white">
+        <div className="glass-card rounded-3xl p-6 sm:p-10 md:p-16 text-center glow-white">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full text-[10px] text-white/40 tracking-[0.3em] uppercase font-medium mb-10">
             <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
@@ -39,7 +39,7 @@ export default function Contact() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary inline-flex items-center gap-3 text-sm font-bold px-10 py-5 rounded-full mb-4 tracking-widest uppercase"
+            className="btn-primary inline-flex w-full sm:w-auto justify-center items-center gap-3 text-sm font-bold px-10 py-5 rounded-full mb-4 tracking-widest uppercase"
           >
             <MessageCircle size={18} />
             Falar no WhatsApp

@@ -1,8 +1,8 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-2">
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center">
         <h1 className="font-black tracking-tight">
           <span className="hero-experts block text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] leading-[0.88] mb-0">
             EXPERTS

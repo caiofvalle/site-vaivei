@@ -64,10 +64,10 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-12 flex justify-center px-0">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 text-xs font-bold px-8 py-4 rounded-full tracking-widest uppercase border border-white/50 text-white bg-transparent hover:bg-white hover:text-black hover:border-white transition-all duration-300"
+            className="inline-flex w-full sm:w-auto justify-center items-center gap-2 text-xs font-bold px-8 py-4 rounded-full tracking-widest uppercase border border-white/50 text-white bg-transparent hover:bg-white hover:text-black hover:border-white transition-all duration-300"
           >
             Pedir um orçamento
             <ArrowRight size={14} />

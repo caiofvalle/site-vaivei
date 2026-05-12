@@ -39,11 +39,11 @@ export default function SocialProof() {
       </div>
 
       {/* Full-width white bar */}
-      <div className="bg-white px-8 py-8 flex flex-wrap justify-center gap-x-12 gap-y-5 mb-24">
+      <div className="bg-white px-6 py-6 flex flex-wrap justify-center gap-x-8 gap-y-4 mb-24">
         {clients.map((client) => (
           <span
             key={client}
-            className="text-black text-2xl tracking-[0.2em] uppercase font-black cursor-default"
+            className="text-black text-base sm:text-xl md:text-2xl tracking-[0.15em] uppercase font-black cursor-default"
           >
             {client}
           </span>

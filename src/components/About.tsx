@@ -14,7 +14,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-10 md:gap-24 items-center">
           {/* Visual side */}
           <div className="relative order-2 md:order-1">
-            <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[3/4]">
               <Image
                 src="/quemsoueu.jpeg"
                 alt="Vaivei Studio"

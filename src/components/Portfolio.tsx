@@ -101,11 +101,11 @@ export default function Portfolio() {
         </div>
 
         {/* Grid 3×3 */}
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-2 md:grid-cols-3">
           {works.map((item) => (
             <div
               key={item.id}
-              className="relative aspect-[19/10] overflow-hidden group cursor-pointer"
+              className="relative aspect-square md:aspect-[19/10] overflow-hidden group cursor-pointer"
             >
               <Image
                 src={item.img}
