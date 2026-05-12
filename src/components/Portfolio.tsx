@@ -53,10 +53,11 @@ const works: Work[] = [
   },
   {
     id: 6,
-    type: "photo",
+    type: "video",
     category: "Concerto",
-    title: "MEO Sudowoodo",
-    img: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80",
+    title: "Leo Santana — Coliseu",
+    img: "https://i.vimeocdn.com/video/2156375086-d3e4721f1b24fef2e1b8545c42c8dde3edd7bb7e15b5f39106d72f7103b32af2-d_640?region=us",
+    url: "https://vimeo.com/1191380968",
   },
   {
     id: 7,
