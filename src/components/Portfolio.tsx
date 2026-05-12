@@ -80,7 +80,7 @@ const works: Work[] = [
     type: "video",
     category: "Corporativo",
     title: "Original Spot Design",
-    img: "https://i.vimeocdn.com/video/1990777437-192d015ec82b5268352d25b1cb89810eb783a385bdd40542be14fb5e7eb42d92-d_1280?region=us",
+    img: "https://i.vimeocdn.com/video/2156566545-e5d6c09e67dbad66a8bfbda3ab87b5109dae8bcdcfe85bb73a314168be44e91c-d_640?region=us",
     url: "https://vimeo.com/1063635059",
   },
 ];
