@@ -22,9 +22,10 @@ const works: Work[] = [
   {
     id: 2,
     type: "video",
-    category: "Branding",
-    title: "Campanha Nacional",
-    img: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=80",
+    category: "Concerto",
+    title: "Raphael G. 2026 Tour",
+    img: "https://i.vimeocdn.com/video/2133169555-58357e1d8d0ec3993c396d121c55d0668d867bb28f92a06844707ed224c60c2e-d_640?region=us",
+    url: "https://vimeo.com/1173093820",
   },
   {
     id: 3,
