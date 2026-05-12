@@ -56,7 +56,7 @@ const works: Work[] = [
     type: "video",
     category: "Concerto",
     title: "Leo Santana — Coliseu",
-    img: "https://i.vimeocdn.com/video/2156375086-d3e4721f1b24fef2e1b8545c42c8dde3edd7bb7e15b5f39106d72f7103b32af2-d_640?region=us",
+    img: "https://i.vimeocdn.com/video/2156564561-74e81c9a43305371ead831a49788661279b3e39dbb1c2f2ecccd083cd1415810-d_1280?region=us",
     url: "https://vimeo.com/1191380968",
   },
   {
