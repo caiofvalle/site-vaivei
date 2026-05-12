@@ -143,9 +143,6 @@ export default function Portfolio() {
               )}
 
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                <p className="text-white/50 text-[10px] tracking-[0.3em] uppercase mb-1">
-                  {item.category}
-                </p>
                 <p className="text-white text-sm font-semibold">{item.title}</p>
               </div>
             </Wrapper>
