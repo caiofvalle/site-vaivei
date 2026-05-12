@@ -64,7 +64,7 @@ const works: Work[] = [
     type: "video",
     category: "Institucional",
     title: "Ordem dos Enfermeiros",
-    img: "https://i.vimeocdn.com/video/2156375339-e773d578d117b66feea23318b5ded493fe78dcd0a902cc5dbe0d05b576afb9e5-d_640?region=us",
+    img: "https://i.vimeocdn.com/video/2156375339-e773d578d117b66feea23318b5ded493fe78dcd0a902cc5dbe0d05b576afb9e5-d_1280?region=us",
     url: "https://vimeo.com/1191381019",
   },
   {
@@ -81,27 +81,6 @@ const works: Work[] = [
     category: "Noite",
     title: "Cidade à Noite",
     img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80",
-  },
-  {
-    id: 10,
-    type: "video",
-    category: "Concerto",
-    title: "Rock in Rio Lisboa",
-    img: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80",
-  },
-  {
-    id: 11,
-    type: "photo",
-    category: "Editorial",
-    title: "Moda Urbana",
-    img: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&q=80",
-  },
-  {
-    id: 12,
-    type: "video",
-    category: "Corporativo",
-    title: "Fórum Empresarial",
-    img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
   },
 ];
 
