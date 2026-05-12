@@ -9,13 +9,13 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Vaivei Studio — Produção Audiovisual",
+  title: "Vaivei — Produção Audiovisual",
   description:
     "Produção audiovisual em Lisboa. Filmagem, fotografia e cobertura de eventos — concertos, artistas e corporativos. Cada frame com intenção.",
   keywords:
     "produção audiovisual lisboa, filmagem eventos, fotografia concertos, cobertura audiovisual, video corporativo portugal",
   openGraph: {
-    title: "Vaivei Studio — Produção Audiovisual",
+    title: "Vaivei — Produção Audiovisual",
     description: "Filmagem, fotografia e cobertura de eventos em Lisboa e Portugal.",
     type: "website",
   },
