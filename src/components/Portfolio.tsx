@@ -29,10 +29,11 @@ const works: Work[] = [
   },
   {
     id: 3,
-    type: "photo",
-    category: "Editorial",
-    title: "Série Urbana",
-    img: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
+    type: "video",
+    category: "Concerto",
+    title: "Human Protocol — Lisboa 2024",
+    img: "https://i.vimeocdn.com/video/1998081745-467850ca5679763d7f17e6db0bc2aabe98fc7afc1604eb8c55de41e590a217ef-d_640?region=us",
+    url: "https://vimeo.com/1069703077",
   },
   {
     id: 4,
