@@ -61,10 +61,11 @@ const works: Work[] = [
   },
   {
     id: 7,
-    type: "photo",
-    category: "Festival",
-    title: "Super Bock Super Rock",
-    img: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80",
+    type: "video",
+    category: "Institucional",
+    title: "Ordem dos Enfermeiros",
+    img: "https://i.vimeocdn.com/video/2156375339-e773d578d117b66feea23318b5ded493fe78dcd0a902cc5dbe0d05b576afb9e5-d_640?region=us",
+    url: "https://vimeo.com/1191381019",
   },
   {
     id: 8,
