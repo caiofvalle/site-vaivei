@@ -14,8 +14,8 @@ const works: Work[] = [
   {
     id: 1,
     type: "video",
-    category: "Concerto",
-    title: "NOS Alive '24",
+    category: "Festival",
+    title: "Festvybbe",
     img: "https://i.vimeocdn.com/video/2139197582-aa7184889465b0f058cb51f5d35516f49a0b43b9c0fbbce8ea113c8f3d52ec19-d_640?region=us",
     url: "https://vimeo.com/1177780462",
   },
