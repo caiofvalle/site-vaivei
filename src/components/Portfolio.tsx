@@ -37,10 +37,11 @@ const works: Work[] = [
   },
   {
     id: 4,
-    type: "photo",
-    category: "Retrato",
-    title: "Série Editorial",
-    img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80",
+    type: "video",
+    category: "Corporativo",
+    title: "Vtex — Erik",
+    img: "https://i.vimeocdn.com/video/1981607656-dc2fa429c8f8f0b78ae6332a405a76bd8207eb551a3a9f74bc138241d732ae51-d_640?region=us",
+    url: "https://vimeo.com/1049829566",
   },
   {
     id: 5,
