@@ -36,8 +36,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2">
             <div className="mb-5">
-              <span className="text-2xl font-black tracking-[0.15em] text-t1 uppercase">Vaivei</span>
-              <span className="text-t4 text-xs tracking-widest uppercase ml-3">Studio</span>
+              <img src="/logonova.png" alt="Vaivei" className="h-10 w-auto object-contain" />
             </div>
             <p className="text-t3 text-sm leading-relaxed max-w-xs mb-6">
               Produção audiovisual em Lisboa. Filmagem, fotografia e cobertura de eventos com visão cinematográfica.

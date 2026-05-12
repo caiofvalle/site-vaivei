@@ -28,13 +28,8 @@ export default function Navbar() {
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <span className="text-xl font-black tracking-[0.15em] text-t1 uppercase">
-            Vaivei
-          </span>
-          <span className="text-t4 text-xs tracking-widest uppercase hidden sm:block">
-            Studio
-          </span>
+        <a href="#" className="flex items-center group">
+          <img src="/logonova.png" alt="Vaivei" className="h-10 w-auto object-contain" />
         </a>
 
         {/* Desktop nav */}
