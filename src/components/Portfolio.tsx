@@ -70,9 +70,10 @@ const works: Work[] = [
   {
     id: 8,
     type: "video",
-    category: "Institucional",
-    title: "Grupo Visabeira",
-    img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+    category: "Corporativo",
+    title: "Espaço Bivalmar",
+    img: "https://i.vimeocdn.com/video/1981602696-0c262cdf441fa0cac6856ec6f8636e260563773cced5d7d37654a3490f274a6a-d_640?region=us",
+    url: "https://vimeo.com/1055941858",
   },
   {
     id: 9,
