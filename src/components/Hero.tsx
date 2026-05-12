@@ -1,0 +1,24 @@
+export default function Hero() {
+  return (
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
+        <h1 className="font-black tracking-tight">
+          <span
+            className="block text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] leading-[0.88] mb-0"
+            style={{
+              color: "transparent",
+              WebkitTextStroke: "1.5px rgba(255,255,255,0.5)",
+              filter: "drop-shadow(0 0 12px rgba(255,255,255,0.9)) drop-shadow(0 0 35px rgba(255,255,255,0.45)) drop-shadow(0 0 60px rgba(255,255,255,0.15))",
+            }}
+          >
+            EXPERTS
+          </span>
+          <span className="block text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] text-white leading-[0.88]">EM MOSTRAR</span>
+          <span className="block text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] text-white leading-[0.88] italic">O QUE NÃO SE REPETE.</span>
+        </h1>
+
+      </div>
+    </section>
+  );
+}

@@ -1,26 +1,196 @@
 @import "tailwindcss";
 
+/* ── Theme Variables ─────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-base:        #000000;
+  --bg-raised:      #000000;
+  --bg-surface:     #000000;
+  --t1:             #ffffff;
+  --t2:             rgba(255,255,255,0.80);
+  --t3:             rgba(255,255,255,0.55);
+  --t4:             rgba(255,255,255,0.35);
+  --glass-bg:       rgba(255,255,255,0.03);
+  --glass-border:   rgba(255,255,255,0.07);
+  --glass-card-bg:  rgba(255,255,255,0.025);
+  --glass-card-bdr: rgba(255,255,255,0.06);
+  --glass-card-hov: rgba(255,255,255,0.05);
+  --scrollbar-track:#0a0a0a;
+  --grid-line:      rgba(255,255,255,0.025);
+  --fade-base:      #000000;
+  --border-subtle:  rgba(255,255,255,0.06);
+  --divider:        rgba(255,255,255,0.10);
+}
+
+html.light {
+  --bg-base:        #f5f5f5;
+  --bg-raised:      #ebebeb;
+  --bg-surface:     #e0e0e0;
+  --t1:             #0a0a0a;
+  --t2:             rgba(10,10,10,0.60);
+  --t3:             rgba(10,10,10,0.38);
+  --t4:             rgba(10,10,10,0.18);
+  --glass-bg:       rgba(0,0,0,0.03);
+  --glass-border:   rgba(0,0,0,0.08);
+  --glass-card-bg:  rgba(0,0,0,0.025);
+  --glass-card-bdr: rgba(0,0,0,0.06);
+  --glass-card-hov: rgba(0,0,0,0.05);
+  --scrollbar-track:#ebebeb;
+  --grid-line:      rgba(0,0,0,0.03);
+  --fade-base:      #f5f5f5;
+  --border-subtle:  rgba(0,0,0,0.06);
+  --divider:        rgba(0,0,0,0.10);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ── Base ────────────────────────────────────────────── */
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-base);
+  color: var(--t1);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ── Utilities ───────────────────────────────────────── */
+.text-t1  { color: var(--t1); }
+.text-t2  { color: var(--t2); }
+.text-t3  { color: var(--t3); }
+.text-t4  { color: var(--t4); }
+.bg-base  { background-color: var(--bg-base); }
+.bg-raised { background-color: var(--bg-raised); }
+.bg-surface { background-color: var(--bg-surface); }
+.border-subtle { border-color: var(--border-subtle); }
+.hover\:text-t1:hover { color: var(--t1); }
+
+/* ── Glass ───────────────────────────────────────────── */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.glass-card {
+  background: var(--glass-card-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-card-bdr);
+  transition: all 0.35s ease;
+}
+
+.glass-card:hover {
+  background: var(--glass-card-hov);
+  border-color: rgba(255,255,255,0.14);
+  transform: translateY(-3px);
+}
+
+/* ── Gradient text ───────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #666666 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glow ────────────────────────────────────────────── */
+.glow-white {
+  box-shadow: 0 0 60px rgba(255,255,255,0.06), 0 0 120px rgba(255,255,255,0.02);
+}
+
+.glow-white-sm {
+  box-shadow: 0 0 20px rgba(255,255,255,0.08);
+}
+
+/* ── Buttons ─────────────────────────────────────────── */
+.btn-primary {
+  background: #ffffff;
+  color: #050505;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.06), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.btn-primary:hover::before { transform: translateX(100%); }
+
+.btn-primary:hover {
+  box-shadow: 0 0 30px rgba(255,255,255,0.20);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--t1);
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: rgba(255,255,255,0.30);
+  background: var(--glass-bg);
+}
+
+/* ── Scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+
+/* ── Dividers ────────────────────────────────────────── */
+.section-divider {
+  background: linear-gradient(90deg, transparent, var(--divider), transparent);
+  height: 1px;
+  width: 100%;
+}
+
+/* ── Animations ──────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+/* ── Hero grid ───────────────────────────────────────── */
+.hero-grid {
+  background: #000000;
+}
+
+/* ── Fades ───────────────────────────────────────────── */
+.hero-fade { background: linear-gradient(to top, var(--fade-base), transparent); }
+.fade-top  { background: linear-gradient(to bottom, var(--fade-base), transparent); }
+
+/* ── Orbs ────────────────────────────────────────────── */
+.orb { display: none; }
+.orb-white  {}
+.orb-silver {}
+
+/* ── Video placeholder ───────────────────────────────── */
+.video-placeholder {
+  background: var(--glass-card-bg);
+  border: 1px solid var(--glass-card-bdr);
+  position: relative;
+  overflow: hidden;
+}
+
+.video-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, transparent 50%, rgba(255,255,255,0.01) 100%);
 }
