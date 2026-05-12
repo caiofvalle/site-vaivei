@@ -24,14 +24,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${scrolled ? "py-3" : "py-6"}`}
-      style={scrolled ? {
-        background: "rgba(0, 0, 0, 0.55)",
-        backdropFilter: "blur(24px)",
-        WebkitBackdropFilter: "blur(24px)",
-        borderBottom: "1px solid rgba(255,255,255,0.07)",
-        boxShadow: "0 4px 40px rgba(0,0,0,0.4)",
-      } : {}}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${scrolled ? "py-3 navbar-scrolled" : "py-6"}`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}

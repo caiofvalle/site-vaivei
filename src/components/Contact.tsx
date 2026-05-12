@@ -29,7 +29,7 @@ export default function Contact() {
           </div>
 
           {/* Headline */}
-          <h2 className="text-4xl md:text-6xl font-black text-t1 leading-tight mb-6">
+          <h2 className="text-4xl md:text-6xl font-black text-t1 leading-tight mb-10">
             Vamos criar<br />
             <span className="gradient-text">algo juntos?</span>
           </h2>

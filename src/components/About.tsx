@@ -18,7 +18,7 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-br from-white/[0.04] to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="glass rounded-xl px-4 py-3">
-                  <p className="text-white font-bold text-sm">Vaivei Studio</p>
+                  <p className="text-t1 font-bold text-sm">Vaivei Studio</p>
                   <p className="text-white/50 text-xs tracking-widest uppercase">Lisboa, Portugal</p>
                 </div>
               </div>
@@ -43,7 +43,7 @@ export default function About() {
               <span className="text-white/55 text-[11px] tracking-[0.4em] uppercase font-medium">Sobre nós</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-8">
+            <h2 className="text-4xl md:text-5xl font-black text-t1 leading-tight mb-8">
               Especialistas em produções de filmes e fotografias.
             </h2>
 
@@ -51,7 +51,7 @@ export default function About() {
             <div className="grid grid-cols-2 gap-4 mb-10">
               {stats.map((s) => (
                 <div key={s.label} className="glass-card rounded-xl p-4">
-                  <p className="text-white text-2xl font-black mb-1">{s.value}</p>
+                  <p className="text-t1 text-2xl font-black mb-1">{s.value}</p>
                   <p className="text-white/50 text-xs tracking-wide">{s.label}</p>
                 </div>
               ))}

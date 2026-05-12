@@ -40,13 +40,7 @@ export default function Services() {
           {services.map((s) => (
             <div
               key={s.num}
-              className="relative rounded-2xl overflow-hidden p-8 flex flex-col gap-6 cursor-default group"
-              style={{
-                background: "rgba(255,255,255,0.04)",
-                backdropFilter: "blur(24px)",
-                WebkitBackdropFilter: "blur(24px)",
-                border: "1px solid rgba(255,255,255,0.08)",
-              }}
+              className="services-card relative rounded-2xl overflow-hidden p-8 flex flex-col gap-6 cursor-default group"
             >
               {/* subtle inner glow on hover */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none"
@@ -54,18 +48,18 @@ export default function Services() {
               />
 
               {/* Icons */}
-              <div className="flex items-center gap-3 text-white/25">
+              <div className="flex items-center gap-3 text-t4">
                 <Camera size={16} />
                 <Film size={16} />
               </div>
 
-              <h3 className="text-2xl md:text-3xl font-black text-white leading-tight tracking-tight uppercase">
+              <h3 className="text-2xl md:text-3xl font-black text-t1 leading-tight tracking-tight uppercase">
                 {s.title}
               </h3>
 
-              <div className="h-px w-full" style={{ background: "rgba(255,255,255,0.07)" }} />
+              <div className="section-divider" />
 
-              <p className="text-white/45 text-sm leading-relaxed">{s.desc}</p>
+              <p className="text-t3 text-sm leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>
