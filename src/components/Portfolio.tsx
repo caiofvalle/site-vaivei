@@ -77,10 +77,11 @@ const works: Work[] = [
   },
   {
     id: 9,
-    type: "photo",
-    category: "Noite",
-    title: "Cidade à Noite",
-    img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80",
+    type: "video",
+    category: "Corporativo",
+    title: "Original Spot Design",
+    img: "https://i.vimeocdn.com/video/1990776646-043794ffcb7080a2c8884f8b9dfbc28a79b065aea26b346a9bdf2c28d8844746-d_640?region=us",
+    url: "https://vimeo.com/1063634824",
   },
 ];
 
