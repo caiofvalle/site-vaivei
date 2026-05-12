@@ -1,6 +1,6 @@
 import { Mail, MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = "351900000000";
+const WHATSAPP_NUMBER = "351938209876";
 
 function InstagramIcon({ size = 16 }: { size?: number }) {
   return (
@@ -37,13 +37,14 @@ export default function Footer() {
           <div className="col-span-2">
             <div className="mb-5">
               <img src="/logonova.png" alt="Vaivei" className="h-10 w-auto object-contain" />
+              <p className="text-t3 text-xs tracking-widest uppercase mt-2">Produção Audiovisual · Based in Portugal</p>
             </div>
             <p className="text-t3 text-sm leading-relaxed max-w-xs mb-6">
               Produção audiovisual em Lisboa. Filmagem, fotografia e cobertura de eventos com visão cinematográfica.
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="https://instagram.com/vaivei.studio"
+                href="https://instagram.com/vaiveipt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 glass rounded-lg flex items-center justify-center text-t3 hover:text-t1 hover:border-white/20 transition-all"
@@ -90,7 +91,7 @@ export default function Footer() {
         <div className="section-divider mb-8" />
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-t4 text-xs">
-            © {new Date().getFullYear()} Vaivei Studio. Todos os direitos reservados.
+            © {new Date().getFullYear()} Vaivei Media Service. Todos os direitos reservados.
           </p>
           <p className="text-t4 text-xs">Lisboa, Portugal</p>
         </div>

@@ -1,6 +1,6 @@
 import { MessageCircle, Mail, ArrowRight } from "lucide-react";
 
-const WHATSAPP_NUMBER = "351900000000";
+const WHATSAPP_NUMBER = "351938209876";
 const WHATSAPP_MESSAGE = "Olá! Vi o vosso trabalho e gostaria de falar sobre um projeto.";
 
 function InstagramIcon({ size = 16 }: { size?: number }) {
@@ -53,7 +53,7 @@ export default function Contact() {
           {/* Secondary */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-xs text-t3">
             <a
-              href="https://instagram.com/vaivei.studio"
+              href="https://instagram.com/vaiveipt"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-t1 transition-colors"
