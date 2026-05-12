@@ -1,5 +1,8 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Play } from "lucide-react";
+import { Play, X } from "lucide-react";
 
 type Work = {
   id: number;
@@ -85,57 +88,109 @@ const works: Work[] = [
   },
 ];
 
+function getVimeoId(url: string) {
+  const match = url.match(/vimeo\.com\/(\d+)/);
+  return match ? match[1] : null;
+}
+
 export default function Portfolio() {
+  const [activeVideo, setActiveVideo] = useState<Work | null>(null);
+
+  useEffect(() => {
+    if (activeVideo) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [activeVideo]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setActiveVideo(null); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   return (
-    <section id="portfolio" className="relative py-28 px-6 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="flex items-center gap-3 mb-10">
-          <div className="h-px w-8 bg-white/30" />
-          <span className="text-white/55 text-[11px] tracking-[0.4em] uppercase font-medium">
-            Portfólio
-          </span>
-        </div>
+    <>
+      <section id="portfolio" className="relative py-28 px-6 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="flex items-center gap-3 mb-10">
+            <div className="h-px w-8 bg-white/30" />
+            <span className="text-white/55 text-[11px] tracking-[0.4em] uppercase font-medium">
+              Portfólio
+            </span>
+          </div>
 
-        {/* Grid 3×3 */}
-        <div className="grid grid-cols-2 md:grid-cols-3">
-          {works.map((item) => {
-            const Wrapper = item.url ? "a" : "div";
-            const wrapperProps = item.url
-              ? { href: item.url, target: "_blank", rel: "noopener noreferrer" }
-              : {};
-            return (
-            <Wrapper
-              key={item.id}
-              {...(wrapperProps as any)}
-              className="relative aspect-square md:aspect-[19/10] overflow-hidden group cursor-pointer block"
-            >
-              <Image
-                src={item.img}
-                alt={item.title}
-                fill
-                unoptimized
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+          {/* Grid 3×3 */}
+          <div className="grid grid-cols-2 md:grid-cols-3">
+            {works.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => setActiveVideo(item)}
+                className="relative aspect-square md:aspect-[19/10] overflow-hidden group cursor-pointer block text-left"
+              >
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  unoptimized
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
 
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/55 transition-all duration-400" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/55 transition-all duration-400" />
 
-              {item.type === "video" && (
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center">
-                    <Play size={14} className="text-white ml-0.5" fill="white" />
+                  <div className="w-12 h-12 rounded-full border border-white/60 bg-black/30 flex items-center justify-center">
+                    <Play size={16} className="text-white ml-1" fill="white" />
                   </div>
                 </div>
-              )}
 
-              <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                <p className="text-white text-sm font-semibold">{item.title}</p>
-              </div>
-            </Wrapper>
-            );
-          })}
+                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <p className="text-white text-sm font-semibold">{item.title}</p>
+                </div>
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Modal */}
+      {activeVideo && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+          onClick={() => setActiveVideo(null)}
+        >
+          <div
+            className="relative w-full max-w-4xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setActiveVideo(null)}
+              className="absolute -top-10 right-0 text-white/70 hover:text-white transition-colors"
+            >
+              <X size={24} />
+            </button>
+
+            {/* Title */}
+            <p className="absolute -top-10 left-0 text-white/70 text-sm font-medium">
+              {activeVideo.title}
+            </p>
+
+            {/* Player */}
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden">
+              <iframe
+                src={`https://player.vimeo.com/video/${getVimeoId(activeVideo.url!)}?autoplay=1&title=0&byline=0&portrait=0`}
+                className="absolute inset-0 w-full h-full"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
