@@ -1,13 +1,23 @@
 import Image from "next/image";
 import { Play } from "lucide-react";
 
-const works = [
+type Work = {
+  id: number;
+  type: string;
+  category: string;
+  title: string;
+  img: string;
+  url?: string;
+};
+
+const works: Work[] = [
   {
     id: 1,
-    type: "photo",
+    type: "video",
     category: "Concerto",
     title: "NOS Alive '24",
-    img: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=800&q=80",
+    img: "https://i.vimeocdn.com/video/2139197582-aa7184889465b0f058cb51f5d35516f49a0b43b9c0fbbce8ea113c8f3d52ec19-d_640?region=us",
+    url: "https://vimeo.com/1177780462",
   },
   {
     id: 2,
@@ -102,10 +112,16 @@ export default function Portfolio() {
 
         {/* Grid 3×3 */}
         <div className="grid grid-cols-2 md:grid-cols-3">
-          {works.map((item) => (
-            <div
+          {works.map((item) => {
+            const Wrapper = item.url ? "a" : "div";
+            const wrapperProps = item.url
+              ? { href: item.url, target: "_blank", rel: "noopener noreferrer" }
+              : {};
+            return (
+            <Wrapper
               key={item.id}
-              className="relative aspect-square md:aspect-[19/10] overflow-hidden group cursor-pointer"
+              {...(wrapperProps as any)}
+              className="relative aspect-square md:aspect-[19/10] overflow-hidden group cursor-pointer block"
             >
               <Image
                 src={item.img}
@@ -131,8 +147,9 @@ export default function Portfolio() {
                 </p>
                 <p className="text-white text-sm font-semibold">{item.title}</p>
               </div>
-            </div>
-          ))}
+            </Wrapper>
+            );
+          })}
         </div>
       </div>
     </section>
