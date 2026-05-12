@@ -31,14 +31,6 @@ export default function About() {
               </div>
             </div>
 
-            <div className="hidden sm:grid absolute -right-6 top-1/2 -translate-y-1/2 grid-cols-2 gap-3 glass-card rounded-2xl p-5 animate-float">
-              {stats.slice(0, 2).map((s) => (
-                <div key={s.label} className="text-center px-3">
-                  <p className="text-white text-2xl font-black">{s.value}</p>
-                  <p className="text-white/50 text-[10px] tracking-wide leading-tight mt-1">{s.label}</p>
-                </div>
-              ))}
-            </div>
 
             <div className="absolute -left-4 -bottom-4 w-24 h-24 rounded-xl border border-white/06 -z-10" />
           </div>
