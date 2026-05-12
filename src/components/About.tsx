@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const stats = [
   { value: "16+", label: "Anos de Experiência" },
@@ -14,8 +14,15 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-10 md:gap-24 items-center">
           {/* Visual side */}
           <div className="relative order-2 md:order-1">
-            <div className="relative rounded-2xl overflow-hidden aspect-[3/4] video-placeholder">
-              <div className="absolute inset-0 bg-gradient-to-br from-white/[0.04] to-transparent" />
+            <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
+              <Image
+                src="/quemsoueu.jpeg"
+                alt="Vaivei Studio"
+                fill
+                unoptimized
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="glass rounded-xl px-4 py-3">
                   <p className="text-t1 font-bold text-sm">Vaivei Studio</p>
