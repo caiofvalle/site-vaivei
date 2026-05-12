@@ -3,7 +3,7 @@ import { Camera, Film, ArrowRight } from "lucide-react";
 const services = [
   {
     num: "01",
-    title: "Eventos & Concertos",
+    title: "Festivais & Concertos",
     desc: "Cobertura audiovisual ao vivo — festivais, concertos e espetáculos captados com energia e precisão.",
   },
   {
@@ -13,7 +13,7 @@ const services = [
   },
   {
     num: "03",
-    title: "Promocionais",
+    title: "Eventos & Promocionais",
     desc: "Campanhas visuais que amplificam a mensagem da sua marca — do conceito à entrega final.",
   },
   {
