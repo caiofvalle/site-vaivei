@@ -39,9 +39,6 @@ export default function Footer() {
               <img src="/logonova.png" alt="Vaivei" className="h-10 w-auto object-contain" />
               <p className="text-t3 text-xs tracking-widest uppercase mt-2">Produção Audiovisual · Based in Portugal</p>
             </div>
-            <p className="text-t3 text-sm leading-relaxed max-w-xs mb-6">
-              Produção audiovisual em Lisboa. Filmagem, fotografia e cobertura de eventos com visão cinematográfica.
-            </p>
             <div className="flex items-center gap-3">
               <a
                 href="https://instagram.com/vaiveipt"
